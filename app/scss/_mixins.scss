@@ -1,0 +1,18 @@
+@mixin center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+@mixin numinput {
+    width: 11.875rem;
+    height: 1.5625rem;
+}
+
+@mixin dollarsign {
+    background-image: url("C:/Users/Francis/OneDrive/Desktop/frontend-practice/tip-calculator-app-main/images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-size: 15px;
+    padding-left: 0.5625rem;
+}

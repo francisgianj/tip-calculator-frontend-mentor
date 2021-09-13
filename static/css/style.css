@@ -1,0 +1,91 @@
+html {
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 300;
+  background-color: #c5e4e7;
+}
+
+.input {
+  width: 11.875rem;
+  height: 1.5625rem;
+  border: none;
+  border-radius: 2px;
+  background-color: #f4fafa;
+  text-align: right;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  transition: border 200ms ease-in-out;
+  color: #00494d;
+}
+.input-bill:hover {
+  border-color: #c5e4e7;
+}
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  width: 2.8125rem;
+  height: 1.875rem;
+  padding-top: 5.125rem;
+  padding-bottom: 2.75rem;
+}
+
+.outerbox {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  width: 28.8125rem;
+  height: 15.1875rem;
+  background-color: white;
+  padding: 1.125rem;
+  border-radius: 0.625rem;
+  color: #00494d;
+}
+
+.select-tip {
+  width: 11.9375rem;
+  height: 4.625rem;
+}
+.select-tip button {
+  width: 3.75rem;
+  height: 1.5625rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.4375rem;
+  padding-right: 1.4375rem;
+  border: none;
+  border-radius: 0.1875rem;
+  background-color: #00494d;
+  font-size: 20px;
+  text-align: center;
+  margin: auto;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  transition: color 200ms ease-in-out;
+}
+.select-tip button:hover {
+  background-color: #c5e4e7;
+  color: #00494d;
+}
+.select-tip input {
+  width: 3.75rem;
+  height: 1.5625rem;
+  color: blue;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="static/js/script.js"></script>
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+  <img src="images/logo.svg" class="logo" alt="splitter">
+
+  <div class="outerbox center">
+    <label for="bill">Bill</label>
+    <br>
+    <input type="text" name="bill" class="input input-bill">
+    <br>
+    <div class="select-tip">
+      Select Tip %
+
+
+      <button value="5" onclick="getPercent(this)">5%</button>
+      <button value="10" onclick="getPercent(this)">10%</button>
+      <button value="15" onclick="getPercent(this)">15%</button>
+      <button value="25" onclick="getPercent(this)">25%</button>
+      <button value="50" onclick="getPercent(this)">50%</button>
+
+  
+      <script src="static/js/getPercent.js"></script>
+
+
+    </div>
+    <label for="numofpeople" >Number of People</label>
+    <br>
+    <input type="text" name="numofpeople" class="input">
+  </div>
+  <h1 id="testing"></h1>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Francis Gian Juson</a>.
+  </div>
+</body>
+
+</html>
