@@ -1,0 +1,165 @@
+html{
+    font-family: $font;
+    font-size: 1.5rem;
+    font-weight: 300;
+    background-color: $lightGrayishCyan1;
+
+}
+
+.input{
+    @include numinput();
+    border: none;
+    border-radius: 2px;
+    background-color: $lightGrayishCyan2;
+    text-align: right;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 0.5rem;
+    transition: border 200ms ease-in-out;
+    color: $veryDarkCyan;
+
+    &-bill{
+        
+        &:hover{
+            border-color: $lightGrayishCyan1;
+        }
+    }
+
+}
+
+.logo{
+    @include center();
+    width: 2.8125rem;
+    height: 1.875rem;
+    padding-top: 5.125rem;
+    padding-bottom: 2.75rem;
+}
+
+.outerbox{
+    @include center();
+    width: 28.8125rem;
+    height: 15.1875rem;
+    background-color: $white;
+    padding: 1.5625rem;
+    border-radius: 0.625rem;
+    color: $veryDarkCyan;
+    
+}
+
+
+
+
+.bills-and-inputs-div{
+    width: 11.875rem;
+    height: 12.3125rem;
+    display: inline-block;
+    margin-right: 1.25rem;
+    
+
+    button{
+        font: $font;
+        @include button-size();
+        display: inline-block;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1.4375rem;
+        padding-right: 1.4375rem;
+        border: none;
+        border-radius: 0.1875rem;
+        background-color: $veryDarkCyan;
+        font-size: 20px;
+        text-align: center;
+        margin: auto;
+        font-weight: 700;
+        color: $white;
+        cursor: pointer;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5625rem;
+        
+        
+    }
+}
+
+.tip-amount-div{
+    width: 11.875rem;
+    height: 12.3125rem;
+    display: inline-block;
+    background-color: $veryDarkCyan;
+    border-radius: 0.625rem;
+    position: fixed;
+    padding-top: 1.875rem;
+    padding-left: 1.3125rem;
+    padding-right: 1.3125rem;
+    padding-bottom: 1.3125rem;
+    color: $white;
+
+    &-pp{
+        display: inline-block;
+        margin-right: 55px;
+        p{
+            margin-top: -36px;
+            color: $darkGrayishCyan2;
+            font-size: 10px
+        }
+        
+    }
+
+    &-price{
+        display: inline-block;
+        text-align: right;
+        margin: auto;
+        h1{
+            font-size: 30px;
+            color: $strongCyan;
+        }
+
+    }
+
+    button{
+        margin-top: 50px;
+        width: 11.375rem;
+        height: 2rem;
+
+        border-radius: 0.3125rem;
+        border: none;
+        text-align: center;
+        background-color: $strongCyan;
+
+
+
+
+        font-family: $font;
+        font-size: 21px;
+        font-weight: 700;
+        color: $veryDarkCyan;
+    }
+}
+
+
+
+
+
+.select-tip{
+    
+    input{
+        @include button-size();
+        color: blue;
+    }
+}
+
+
+
+
+.flex {
+    display: flex;
+
+    &-jc-sb{
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+}

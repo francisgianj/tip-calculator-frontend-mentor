@@ -43,18 +43,22 @@ html {
   width: 28.8125rem;
   height: 15.1875rem;
   background-color: white;
-  padding: 1.125rem;
+  padding: 1.5625rem;
   border-radius: 0.625rem;
   color: #00494d;
 }
 
-.select-tip {
-  width: 11.9375rem;
-  height: 4.625rem;
+.bills-and-inputs-div {
+  width: 11.875rem;
+  height: 12.3125rem;
+  display: inline-block;
+  margin-right: 1.25rem;
 }
-.select-tip button {
+.bills-and-inputs-div button {
+  font: "Space Mono", monospace;
   width: 3.75rem;
   height: 1.5625rem;
+  display: inline-block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1.4375rem;
@@ -68,12 +72,55 @@ html {
   font-weight: 700;
   color: white;
   cursor: pointer;
-  transition: color 200ms ease-in-out;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5625rem;
 }
-.select-tip button:hover {
-  background-color: #c5e4e7;
+
+.tip-amount-div {
+  width: 11.875rem;
+  height: 12.3125rem;
+  display: inline-block;
+  background-color: #00494d;
+  border-radius: 0.625rem;
+  position: fixed;
+  padding-top: 1.875rem;
+  padding-left: 1.3125rem;
+  padding-right: 1.3125rem;
+  padding-bottom: 1.3125rem;
+  color: white;
+}
+.tip-amount-div-pp {
+  display: inline-block;
+  margin-right: 55px;
+}
+.tip-amount-div-pp p {
+  margin-top: -36px;
+  color: #7f9c9f;
+  font-size: 10px;
+}
+.tip-amount-div-price {
+  display: inline-block;
+  text-align: right;
+  margin: auto;
+}
+.tip-amount-div-price h1 {
+  font-size: 30px;
+  color: #26c0ab;
+}
+.tip-amount-div button {
+  margin-top: 50px;
+  width: 11.375rem;
+  height: 2rem;
+  border-radius: 0.3125rem;
+  border: none;
+  text-align: center;
+  background-color: #26c0ab;
+  font-family: "Space Mono", monospace;
+  font-size: 21px;
+  font-weight: 700;
   color: #00494d;
 }
+
 .select-tip input {
   width: 3.75rem;
   height: 1.5625rem;
