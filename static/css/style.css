@@ -3,6 +3,8 @@ html {
   font-size: 1.5rem;
   font-weight: 300;
   background-color: #c5e4e7;
+  width: 1440px;
+  height: 2560px;
 }
 
 .input {
@@ -76,6 +78,26 @@ html {
   margin-bottom: 0.5625rem;
 }
 
+.custom-tip-input {
+  font: "Space Mono", monospace;
+  width: 3.75rem;
+  height: 1.5625rem;
+  display: inline-block;
+  text-align: right;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  border: none;
+  border-radius: 0.1875rem;
+  background-color: white;
+  font-size: 20px;
+  margin: auto;
+  font-weight: 700;
+  color: #00494d;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5625rem;
+}
+
 .tip-amount-div {
   width: 11.875rem;
   height: 12.3125rem;
@@ -119,12 +141,6 @@ html {
   font-size: 21px;
   font-weight: 700;
   color: #00494d;
-}
-
-.select-tip input {
-  width: 3.75rem;
-  height: 1.5625rem;
-  color: blue;
 }
 
 .flex {

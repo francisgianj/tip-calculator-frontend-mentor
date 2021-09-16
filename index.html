@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <script src="static/js/script.js"></script>
 
   <title>Frontend Mentor | Tip calculator app</title>
 
@@ -26,27 +25,28 @@
     <div class="bills-and-inputs-div">
       <label for="bill">Bill</label>
       <br>
-      <input type="text" name="bill" class="input input-bill">
+      <input type="text" name="bill" class="input input-bill" id="bill">
       <br>
       <div class="select-tip select-tip-main-div">
         Select Tip %
-  
+
         <br>
 
-        <button value="5" onclick="getPercent(this)">5%</button>
-        <button value="10" onclick="getPercent(this)">10%</button>
-        <button value="15" onclick="getPercent(this)">15%</button>
-        <button value="25" onclick="getPercent(this)">25%</button>
-        <button value="50" onclick="getPercent(this)">50%</button>
-  
-    
-        <script src="static/js/getPercent.js"></script>
-  
-  
+        <button value="0.05" onclick="getPercent(this)">5%</button>
+        <button value="0.15" onclick="getPercent(this)">15%</button>
+        <button value="0.10" onclick="getPercent(this)">10%</button>
+        <button value="0.50" onclick="getPercent(this)">50%</button>
+        <button value="0.25" onclick="getPercent(this)">25%</button>
+        <input type="text" class="custom-tip-input" id="custom-tip-input" placeholder="CUSTOM">
+
+
+
+        <p style="display: none;" id="tip-value-container">0</p>
+
       </div>
-      <label for="numofpeople" >Number of People</label>
+      <label for="numofpeople">Number of People</label>
       <br>
-      <input type="text" name="numofpeople" class="input">
+      <input type="text" name="numofpeople" class="input" id="num-of-people">
 
     </div>
     <div class="tip-amount-div">
@@ -55,7 +55,7 @@
         <p>/ person</p>
       </div>
       <div class="tip-amount-div-price">
-        <h1>$4.23</h1>
+        <h1 id="tip-amount">$0.00</h1>
       </div>
 
       <div class="tip-amount-div-pp">
@@ -63,22 +63,18 @@
         <p>/ person</p>
       </div>
       <div class="tip-amount-div-price">
-        <h1>$4.23</h1>
+        <h1 id="total-amount">$0.00</h1>
       </div>
-
-
       <button>
         RESET
       </button>
-      
+
     </div>
-
-
-
-
-    
   </div>
   <h1 id="testing"></h1>
+
+  <script src="static/js/script.js"></script>
+
 
 
   <div class="attribution">

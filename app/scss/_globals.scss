@@ -3,7 +3,8 @@ html{
     font-size: 1.5rem;
     font-weight: 300;
     background-color: $lightGrayishCyan1;
-
+    width: 1440px;
+    height: 2560px;
 }
 
 .input{
@@ -82,6 +83,28 @@ html{
     }
 }
 
+.custom-tip-input{
+    font: $font;
+    @include button-size();
+    display: inline-block;
+    text-align: right;
+    // padding top and bottom is defaulted to 0.5rem
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    // padding-left: 1.4375rem;
+    // padding-right: 1.4375rem;
+    border: none;
+    border-radius: 0.1875rem;
+    background-color: $white;
+    font-size: 20px;
+    margin: auto;
+    font-weight: 700;
+    color: $veryDarkCyan;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5625rem;
+}
+
 .tip-amount-div{
     width: 11.875rem;
     height: 12.3125rem;
@@ -136,21 +159,6 @@ html{
         color: $veryDarkCyan;
     }
 }
-
-
-
-
-
-.select-tip{
-    
-    input{
-        @include button-size();
-        color: blue;
-    }
-}
-
-
-
 
 .flex {
     display: flex;
