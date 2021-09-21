@@ -1,0 +1,20 @@
+.input-div-grid {
+    display: grid;
+    grid-template-columns: 505px;
+    grid-template-rows: 95px 195px 95px;
+    row-gap: 65px;
+
+    p {
+        color: $darkGrayishCyan1;
+        font-size: 1rem;
+        font-weight: bold;
+
+        span {
+            color: $errorColor;
+            float: right;
+            visibility: hidden;
+        }
+    }
+
+    
+}

@@ -22,56 +22,71 @@
   <img src="images/logo.svg" class="logo" alt="splitter">
 
   <div class="outerbox">
-    <div class="bills-and-inputs-div">
-      <label for="bill">Bill</label>
-      <br>
-      <input type="text" name="bill" class="input input-bill" id="bill">
-      <br>
-      <div class="select-tip select-tip-main-div">
-        Select Tip %
-
-        <br>
-
-        <button value="0.05" onclick="getPercent(this)">5%</button>
-        <button value="0.15" onclick="getPercent(this)">15%</button>
-        <button value="0.10" onclick="getPercent(this)">10%</button>
-        <button value="0.50" onclick="getPercent(this)">50%</button>
-        <button value="0.25" onclick="getPercent(this)">25%</button>
-        <input type="text" class="custom-tip-input" id="custom-tip-input" placeholder="CUSTOM">
-
-
-
-        <p style="display: none;" id="tip-value-container">0</p>
-
+    <!-- div 1 of 2 inside the outerbox -->
+    <div class="input-div-grid"><!--"outerbox-item"-->
+      <div>
+        <!-- div 1 -->
+        <p>Bill</p>
+        <input type="text" name="bill" class="input" id="bill" placeholder="0">
       </div>
-      <label for="numofpeople">Number of People</label>
-      <br>
-      <input type="text" name="numofpeople" class="input" id="num-of-people">
 
+
+      <div>
+        <!-- div 2 -->
+        <!-- TODO margin bottom maybe -->
+        <p>Select Tip %</p>
+        <div class="grid" name="tip-buttons">
+          <button value="0.05" onclick="getPercent(this)" class="grid-item">5%</button>
+          <button value="0.15" onclick="getPercent(this)" class="grid-item">15%</button>
+          <button value="0.10" onclick="getPercent(this)" class="grid-item">10%</button>
+          <button value="0.50" onclick="getPercent(this)" class="grid-item">50%</button>
+          <button value="0.25" onclick="getPercent(this)" class="grid-item">25%</button>
+          <input type="text" id="custom-tip-input" placeholder="Custom" class="grid-item-input">
+        </div>
+      </div>
+
+
+      <div>
+        <!-- div 3 -->
+        <p>Number of People<span id="not-zero">Can't be zero</span></p>
+        <input type="text" name="numofpeople" class="input" id="num-of-people" placeholder="0">
+      </div>
+
+
+      <p style="display: none;" id="tip-value-container">0</p>
     </div>
-    <div class="tip-amount-div">
-      <div class="tip-amount-div-pp">
-        <h6>Tip Amount</h6>
-        <p>/ person</p>
-      </div>
-      <div class="tip-amount-div-price">
-        <h1 id="tip-amount">$0.00</h1>
+    <!-- div 2 of 2 inside the outerbox -->
+    <div class="tip-and-total outerbox-item">
+
+      <div class="tip-and-total-grid">
+        <div class="gr">
+          <!-- div 1 -->
+          <div>
+            <p class="header">Tip Amount</p>
+            <p class="person">/ person</p>
+          </div>
+          <div>
+            <p id="tip-amount" class="amount">$0.00</p>
+          </div>
+        </div>
+  
+  
+        <div class="gr">
+          <div>
+            <p class="header">Total</p>
+            <p class="person">/ person</p>
+          </div>
+          <div>
+            <p id="total-amount" class="amount">$0.00</p>
+          </div>
+        </div>
       </div>
 
-      <div class="tip-amount-div-pp">
-        <h6>Total</h6>
-        <p>/ person</p>
-      </div>
-      <div class="tip-amount-div-price">
-        <h1 id="total-amount">$0.00</h1>
-      </div>
-      <button onclick="reset()">
-        RESET
-      </button>
+
+      <button onclick="reset()" id="reset-button">RESET</button>
 
     </div>
   </div>
-  <h1 id="testing"></h1>
 
   <script src="static/js/script.js"></script>
 

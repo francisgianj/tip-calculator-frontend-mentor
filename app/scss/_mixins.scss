@@ -6,8 +6,8 @@
 }
 
 @mixin numinput {
-    width: 11.875rem;
-    height: 1.5625rem;
+    width: 505px;
+    height: 65px;
 }
 
 @mixin dollarsign {
@@ -20,4 +20,10 @@
 @mixin button-size {
     width: 3.75rem;
     height: 1.5625rem;
+}
+
+@mixin fontSettings {
+    font-family: inherit;
+    // font-size: inherit;
+    font-weight: bold;
 }

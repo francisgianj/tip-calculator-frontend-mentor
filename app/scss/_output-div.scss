@@ -1,0 +1,59 @@
+.tip-and-total {
+    background-color: $veryDarkCyan;
+    color: $white;
+
+    border-radius: 20px;
+    padding: 56px;
+
+    display: block;
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 443px;
+        grid-template-rows: 53px 53px;
+        row-gap: 75px;
+    }
+
+    .header {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .person {
+        color: $darkGrayishCyan1;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    button {
+        @include fontSettings();
+        background-color: hsl(183, 79%, 24%);
+        color: hsl(184, 92%, 20%);
+
+        cursor: pointer;
+
+        border: none;
+        border-radius: 5px;
+
+        width: 445px;
+        height: 65px;
+        margin-top: 190px;
+    }
+}
+
+
+.gr {
+    display: grid;
+    grid-template-columns: 130px 180px;
+    grid-template-rows: 50px;
+    column-gap: 130px;
+
+    .amount {
+        font-size: 3.125rem;
+        color: $strongCyan;
+        font-weight: bold;
+        text-align: right;
+        margin-top: 5px;
+    }
+}
+
+
