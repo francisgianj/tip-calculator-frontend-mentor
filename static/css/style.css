@@ -140,6 +140,7 @@ body {
 .tip-and-total button {
   font-family: inherit;
   font-weight: bold;
+  font-size: 1.25rem;
   background-color: #0d696e;
   color: #045c62;
   cursor: pointer;

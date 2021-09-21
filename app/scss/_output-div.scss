@@ -26,6 +26,7 @@
 
     button {
         @include fontSettings();
+        font-size: 1.25rem;
         background-color: hsl(183, 79%, 24%);
         color: hsl(184, 92%, 20%);
 

@@ -26,13 +26,13 @@ document.addEventListener("keyup", (event)=> {
     // if (!customTipInput) {
     //     tipValueContainer.innerHTML = 0;
     // }
-    // reset $strongCyan button color
+
 
     let billInput = parseFloat(document.querySelector("#bill").value);
     let numOfPeople = parseFloat(document.querySelector("#num-of-people")
     .value);
 
-    if (billInput) {
+    if (billInput || customTipInput || numOfPeople) {
         document.querySelector("#reset-button").style.backgroundColor = "hsl(172, 67%, 45%)";
     } else {
         document.querySelector("#reset-button").style.backgroundColor = "hsl(183, 79%, 24%)";
@@ -82,6 +82,7 @@ const getPercent = (element) => {
     items.forEach((value) => {
         if (buttonValue == value.value) {
             value.style.backgroundColor = "hsl(172, 67%, 45%)";
+            document.querySelector("#reset-button").style.backgroundColor = "hsl(172, 67%, 45%)";
         } else {
             value.style.backgroundColor = "";
         }
@@ -117,4 +118,10 @@ const reset = () => {
     document.querySelector("#reset-button").style.backgroundColor = "hsl(183, 79%, 24%)";
     document.querySelector("#not-zero").style.visibility = "hidden";
     document.querySelector("#num-of-people").style.border = "none";
+
+    const items = document.querySelectorAll(".grid-item");
+    
+    items.forEach((value) => {
+        value.style.backgroundColor = "";
+    });
 };
