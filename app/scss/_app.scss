@@ -1,0 +1,33 @@
+
+
+.app {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1rem;
+
+    display: grid;
+    grid-template-columns: 557px 557px;
+    grid-template-rows: 550px 550px;
+    grid-column-gap: 20px;
+
+    width: 1228px;
+    height: 644px;
+    background-color: $white;
+    padding: 44px;
+    border-radius: 37px;
+    color: $veryDarkCyan;
+
+    .input{
+        @include input($text-align: right);
+        width: 505px;
+        height: 65px;
+
+
+        background-color: $lightGrayishCyan2;
+        text-align: right;
+
+        padding: 20px;
+
+    }
+    
+}

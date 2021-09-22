@@ -12,7 +12,7 @@
         cursor: pointer;
         background-color: $veryDarkCyan;
         border: none;
-        border-radius: 7px;
+        border-radius: 8px;
         padding-top: 5px;
         padding-bottom: 5px;
         padding-left: 17px;
@@ -25,30 +25,12 @@
         }
 
         &-input {
-            @include fontSettings();
-            font-size: 1.5rem;
-
-            cursor: pointer;
-
             text-align: center;
 
-            border: none;
-            border-radius: 7px;
             padding: 18px;
 
-            background-color: $lightGrayishCyan2;
-            caret-color: $caretColor;
-            color: $veryDarkCyan;
 
-            &:hover {
-                border: solid $strongCyan 2px;
-            }
-        
-            &:focus {
-                border: solid $strongCyan 2px;
-                text-align: right;
-                outline: none;
-            }
+            @include input($text-align: right);
         }
     }
 }

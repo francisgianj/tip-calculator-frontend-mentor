@@ -5,11 +5,6 @@
     width: 50%;
 }
 
-@mixin numinput {
-    width: 505px;
-    height: 65px;
-}
-
 @mixin dollarsign {
     background-image: url("C:/Users/Francis/OneDrive/Desktop/frontend-practice/tip-calculator-app-main/images/icon-dollar.svg");
     background-repeat: no-repeat;
@@ -24,6 +19,26 @@
 
 @mixin fontSettings {
     font-family: inherit;
-    // font-size: inherit;
     font-weight: bold;
+}
+
+@mixin input($text-align) {
+    border: none;
+    border-radius: 8px;
+    color: $veryDarkCyan;
+    caret-color: $caretColor;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+        border: solid $strongCyan 2px;
+    }
+
+    &:focus {
+        border: solid $strongCyan 2px;
+        text-align: $text-align;
+        outline: none;
+    }
 }

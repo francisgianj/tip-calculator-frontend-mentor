@@ -1,15 +1,9 @@
 document.addEventListener("keyup", (event)=> {
-    // Custom tip input id: custom-tip-input
+
     const tipValueContainer = document.querySelector("#tip-value-container");
     const customTipInput = parseFloat(document.querySelector("#custom-tip-input")
     .value);
 
-
-
-    // TODO 
-    // Figure out when the the user just clear out the custom input
-    // and doesn't click any button, set the tipValueContainer to 0
-    // without breaking it.
     if (customTipInput) {
         document.querySelector("#custom-tip-input").style.textAlign = "right";
         const items = document.querySelectorAll(".grid-item");
@@ -21,12 +15,8 @@ document.addEventListener("keyup", (event)=> {
         tipValueContainer.innerHTML = customTipInput / 100;
     } else {
         document.querySelector("#custom-tip-input").style.textAlign = "";
+        tipValueContainer.innerHTML = 0;
     }
-
-    // if (!customTipInput) {
-    //     tipValueContainer.innerHTML = 0;
-    // }
-
 
     let billInput = parseFloat(document.querySelector("#bill").value);
     let numOfPeople = parseFloat(document.querySelector("#num-of-people")
@@ -47,7 +37,7 @@ document.addEventListener("keyup", (event)=> {
     }
 
     document.querySelector("#not-zero").style.visibility = "hidden";
-    document.querySelector("#num-of-people").style.border = "none";
+    document.querySelector("#num-of-people").style.border = "";
 
     const tipAmount = document.querySelector("#tip-amount");
     const totalAmount = document.querySelector("#total-amount");
