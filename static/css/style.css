@@ -44,10 +44,8 @@ body {
   background-color: #00494d;
   border: none;
   border-radius: 8px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 17px;
-  padding-right: 17px;
+  padding: 5px 17px;
+  transition: color 400ms ease-in-out;
 }
 .grid-item:hover {
   background-color: #a1e8e0;
@@ -64,6 +62,7 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: color 400ms ease-in-out;
 }
 .grid-item-input:hover {
   border: solid #26c0ab 2px;
@@ -100,7 +99,7 @@ body {
   font-family: inherit;
   font-weight: bold;
   font-size: 1.25rem;
-  background-color: #0d696e;
+  background-color: #26c0ab;
   color: #045c62;
   cursor: pointer;
   border: none;
@@ -108,6 +107,10 @@ body {
   width: 445px;
   height: 65px;
   margin-top: 190px;
+}
+.tip-and-total button:disabled {
+  cursor: default;
+  background-color: #0d696e;
 }
 
 .gr {
@@ -166,6 +169,7 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
   cursor: pointer;
+  transition: color 400ms ease-in-out;
   width: 505px;
   height: 65px;
   background-color: #f4fafa;
@@ -179,4 +183,30 @@ body {
   border: solid #26c0ab 2px;
   text-align: right;
   outline: none;
+}
+
+#dollar-sign {
+  position: relative;
+}
+#dollar-sign::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  background: url(/images/icon-dollar.svg) center/contain no-repeat;
+}
+
+#people-icon {
+  position: relative;
+}
+#people-icon::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+  background: url(/images/icon-person.svg) center/contain no-repeat;
 }/*# sourceMappingURL=style.css.map */

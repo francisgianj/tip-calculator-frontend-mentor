@@ -23,11 +23,14 @@
 
   <div class="app">
     <!-- div 1 of 2 inside the outerbox -->
-    <div class="input-div-grid"><!--"outerbox-item"-->
+    <div class="input-div-grid">
+      <!--"outerbox-item"-->
       <div>
         <!-- div 1 -->
         <p>Bill</p>
-        <input type="text" name="bill" class="input" id="bill" placeholder="0">
+        <label id="dollar-sign">
+          <input type="text" name="bill" class="input" id="bill" placeholder="0">
+        </label>
       </div>
 
 
@@ -49,7 +52,9 @@
       <div>
         <!-- div 3 -->
         <p>Number of People<span id="not-zero">Can't be zero</span></p>
-        <input type="text" name="numofpeople" class="input" id="num-of-people" placeholder="0">
+        <label id="people-icon">
+          <input type="text" name="numofpeople" class="input" id="num-of-people" placeholder="0">
+        </label>
       </div>
 
 
@@ -69,8 +74,8 @@
             <p id="tip-amount" class="amount">$0.00</p>
           </div>
         </div>
-  
-  
+
+
         <div class="gr">
           <div>
             <p class="header">Total</p>

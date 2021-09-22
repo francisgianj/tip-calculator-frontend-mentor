@@ -13,11 +13,8 @@
         background-color: $veryDarkCyan;
         border: none;
         border-radius: 8px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 17px;
-        padding-right: 17px;
-        
+        padding: 5px 17px;
+        transition: color 400ms ease-in-out;
 
         &:hover {
             background-color: $lightGrayishCyan3;

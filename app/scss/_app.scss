@@ -28,6 +28,29 @@
 
         padding: 20px;
 
+        
+
     }
-    
+}
+
+@mixin icon($imgLink) {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 24px;
+        background: $imgLink center / contain no-repeat;
+}
+}
+
+#dollar-sign {
+    @include icon($imgLink: url(/images/icon-dollar.svg));
+}
+
+#people-icon {
+    @include icon($imgLink: url(/images/icon-person.svg));
 }

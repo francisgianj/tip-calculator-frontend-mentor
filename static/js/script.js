@@ -21,11 +21,11 @@ document.addEventListener("keyup", (event)=> {
     let billInput = parseFloat(document.querySelector("#bill").value);
     let numOfPeople = parseFloat(document.querySelector("#num-of-people")
     .value);
-
+    // when hover hsl(173, 61%, 77%)
     if (billInput || customTipInput || numOfPeople) {
-        document.querySelector("#reset-button").style.backgroundColor = "hsl(172, 67%, 45%)";
+        document.querySelector("#reset-button").disabled = false;
     } else {
-        document.querySelector("#reset-button").style.backgroundColor = "hsl(183, 79%, 24%)";
+        document.querySelector("#reset-button").disabled = true;
     }
 
     // Check if Number of People input is empty
@@ -72,9 +72,10 @@ const getPercent = (element) => {
     items.forEach((value) => {
         if (buttonValue == value.value) {
             value.style.backgroundColor = "hsl(172, 67%, 45%)";
-            document.querySelector("#reset-button").style.backgroundColor = "hsl(172, 67%, 45%)";
+            document.querySelector("#reset-button").disabled = false;
         } else {
             value.style.backgroundColor = "";
+
         }
 
     });
@@ -105,7 +106,7 @@ const reset = () => {
     document.querySelector("#tip-value-container").innerHTML = 0;
     document.querySelector("#tip-amount").innerHTML = "$0.00";
     document.querySelector("#total-amount").innerHTML = "$0.00";
-    document.querySelector("#reset-button").style.backgroundColor = "hsl(183, 79%, 24%)";
+    document.querySelector("#reset-button").disabled = true;
     document.querySelector("#not-zero").style.visibility = "hidden";
     document.querySelector("#num-of-people").style.border = "none";
 
