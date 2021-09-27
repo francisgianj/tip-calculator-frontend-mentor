@@ -27,73 +27,33 @@ body {
   margin-bottom: 40px;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: 157px 157px 157px;
-  grid-template-rows: 65px 65px 65px;
-  -moz-column-gap: 18px;
-       column-gap: 18px;
-  row-gap: 20px;
-}
-.grid-item {
-  font-family: inherit;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-  background-color: #00494d;
-  border: none;
-  border-radius: 8px;
-  padding: 5px 17px;
-  transition: color 400ms ease-in-out;
-}
-.grid-item:hover {
-  background-color: #a1e8e0;
-  color: #00494d;
-}
-.grid-item-input {
-  text-align: center;
-  padding: 18px;
-  border: none;
-  border-radius: 8px;
-  color: #00494d;
-  caret-color: #6da29b;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: 1.5rem;
-  cursor: pointer;
-  transition: color 400ms ease-in-out;
-}
-.grid-item-input:hover {
-  border: solid #26c0ab 2px;
-}
-.grid-item-input:focus {
-  border: solid #26c0ab 2px;
-  text-align: right;
-  outline: none;
-}
-
 .tip-and-total {
   background-color: #00494d;
   color: white;
-  border-radius: 20px;
-  padding: 56px;
+  border-radius: 1.25rem;
+  padding: 3.5rem;
   display: block;
-}
-.tip-and-total-grid {
-  display: grid;
-  grid-template-columns: 443px;
-  grid-template-rows: 53px 53px;
-  row-gap: 75px;
 }
 .tip-and-total .header {
   font-size: 1rem;
   font-weight: bold;
+  margin-top: 1.875rem;
+  -webkit-margin-after: 0.75rem;
+          margin-block-end: 0.75rem;
 }
 .tip-and-total .person {
   color: #5e7a7d;
   font-size: 1rem;
   font-weight: bold;
+  margin-block: unset;
+  margin-bottom: 5rem;
+}
+.tip-and-total .amount {
+  font-size: 3.125rem;
+  color: #26c0ab;
+  font-weight: bold;
+  margin-block: unset;
+  float: right;
 }
 .tip-and-total button {
   font-family: inherit;
@@ -104,65 +64,50 @@ body {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  width: 445px;
-  height: 65px;
-  margin-top: 190px;
+  width: 100%;
+  height: 4.0625rem;
+  margin-top: 80px;
 }
 .tip-and-total button:disabled {
   cursor: default;
   background-color: #0d696e;
 }
 
-.gr {
-  display: grid;
-  grid-template-columns: 130px 180px;
-  grid-template-rows: 50px;
-  -moz-column-gap: 130px;
-       column-gap: 130px;
+.calculator-item:not(:last-child) {
+  margin-bottom: 50px;
 }
-.gr .amount {
-  font-size: 3.125rem;
-  color: #26c0ab;
+.calculator-item .button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 31.5625rem;
+}
+.calculator-item .button-container .button-input, .calculator-item .button-container .button-item {
+  width: 9.8125rem;
+  height: 4.0625rem;
+  margin: 0.625rem 0;
+  text-align: center;
+}
+.calculator-item .button-container .button-item {
+  font-family: inherit;
   font-weight: bold;
-  text-align: right;
-  margin-top: 5px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  background-color: #00494d;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1.0625rem;
+  transition: color 400ms ease-in-out;
 }
-
-.input-div-grid {
-  display: grid;
-  grid-template-columns: 505px;
-  grid-template-rows: 95px 195px 95px;
-  row-gap: 65px;
-}
-.input-div-grid p {
-  color: #5e7a7d;
-  font-size: 1rem;
-  font-weight: bold;
-}
-.input-div-grid p span {
-  color: #b77d6c;
-  float: right;
-  visibility: hidden;
-}
-
-.app {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 1rem;
-  display: grid;
-  grid-template-columns: 557px 557px;
-  grid-template-rows: 550px 550px;
-  grid-column-gap: 20px;
-  width: 1228px;
-  height: 644px;
-  background-color: white;
-  padding: 44px;
-  border-radius: 37px;
+.calculator-item .button-container .button-item:hover {
+  background-color: #a1e8e0;
   color: #00494d;
 }
-.app .input {
-  border: none;
-  border-radius: 8px;
+.calculator-item .button-container .button-input {
+  padding: 1.125rem;
+  border: solid transparent 2px;
+  border-radius: 0.5rem;
   color: #00494d;
   caret-color: #6da29b;
   font-family: inherit;
@@ -170,19 +115,48 @@ body {
   font-size: 1.5rem;
   cursor: pointer;
   transition: color 400ms ease-in-out;
-  width: 505px;
-  height: 65px;
-  background-color: #f4fafa;
-  text-align: right;
-  padding: 20px;
 }
-.app .input:hover {
+.calculator-item .button-container .button-input:hover {
   border: solid #26c0ab 2px;
 }
-.app .input:focus {
+.calculator-item .button-container .button-input:focus {
   border: solid #26c0ab 2px;
   text-align: right;
   outline: none;
+}
+.calculator .input {
+  border: solid transparent 2px;
+  border-radius: 0.5rem;
+  color: #00494d;
+  caret-color: #6da29b;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 400ms ease-in-out;
+  width: 31.5625rem;
+  height: 4.0625rem;
+  background-color: #f4fafa;
+  text-align: right;
+  padding: 1.25rem;
+}
+.calculator .input:hover {
+  border: solid #26c0ab 2px;
+}
+.calculator .input:focus {
+  border: solid #26c0ab 2px;
+  text-align: right;
+  outline: none;
+}
+.calculator p {
+  color: #5e7a7d;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.calculator p span {
+  color: #b77d6c;
+  float: right;
+  visibility: hidden;
 }
 
 #dollar-sign {
@@ -209,4 +183,74 @@ body {
   bottom: 0;
   width: 24px;
   background: url(/images/icon-person.svg) center/contain no-repeat;
+}
+
+.app {
+  margin: auto;
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 76.75rem;
+  height: 41.5rem;
+  background-color: white;
+  padding: 2.75rem;
+  border-radius: 2.3125rem;
+  color: #00494d;
+}
+.app-item {
+  width: 34.5rem;
+  height: 34.75rem;
+}
+
+@media only screen and (max-width: 76.75rem) {
+  .app {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 73.375rem) {
+  .app {
+    width: auto;
+    height: auto;
+  }
+  .app-item {
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .app-item:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .app .calculator-item .button-container {
+    width: 100%;
+  }
+  .app .calculator-item .button-container .button-item {
+    width: 47%;
+  }
+  .app .calculator-item .button-container .button-input {
+    width: 47%;
+  }
+  .app .calculator .input {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 80%;
+  }
+
+  .app {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tip-and-total {
+    padding: 1.5rem;
+  }
+  .tip-and-total button {
+    margin-top: unset;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -16,8 +16,6 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -49,40 +47,39 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
+- HTML 5
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- JavaScript
+- [SCSS](https://sass-lang.com/) - Superset of CSS
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
+ 
+When I started to create this project, there weren't a lot of expectations that I had for myself. I'm not a visual person, I think logic is best suited for me. That's why I think front-end development is not my thing. While creating this project, I was studying and watching lectures about HTML and CSS. These resources gave me the knowledge to pursue finishing this project within two weeks. And within that two weeks, there's a lot of frustration and procrastination because of a certain problem, Most specifically with overflowing of elements. Besides all of that, I learn how to use some of the complex CSS properties like flex and grid, and it's my first time using media queries too for responsive design. I also learned how to use the rem length unit and how rem differs from px. This is just two weeks of coding with HTML, SCSS, and JavaScript. I have so much to learn in the future and I'm looking forward to it.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I took a lot of time trying to write these statements inside the event listener method (keyup) because at first, when I'm deleting numbers inside the input, the tip value container won't clear. The last deleted number stays in the container because, I don't know why I'm having trouble writing the logic when the customTipInput is empty, clear the container. But anyways, I've done it.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+    const tipValueContainer = document.querySelector("#tip-value-container");
+    const customTipInput = parseFloat(document.querySelector("#custom-tip-input")
+    .value);
+
+    if (customTipInput) {
+        document.querySelector("#custom-tip-input").style.textAlign = "right";
+        const items = document.querySelectorAll(".grid-item");
+        
+        items.forEach((value) => {
+            value.style.backgroundColor = "";
+        });
+    
+        tipValueContainer.innerHTML = customTipInput / 100;
+    } else {
+        document.querySelector("#custom-tip-input").style.textAlign = "";
+        tipValueContainer.innerHTML = 0;
+    }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+Also, I jumped out learning SCSS because it saves me time from writing repetitive codes. And it's more organized that's why I got less confuse with my codes.
 
 ### Continued development
 
@@ -92,18 +89,14 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- [CS50's Web Programming with Python and JavaScript 2020](https://www.youtube.com/playlist?list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu) - This lecture helped me understand web programming better.
+  - [HTML and CSS - Lecture 0 - CS50's Web Programming with Python and JavaScript 2020](https://youtu.be/zFZrkCIc2Oc?list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu) - This specific lecture from the playlist above helped me understand HTML and CSS, responsive design, and how flex and grid works.
+  - [The coder coder's How to Make a Landing Page](https://youtu.be/aoQ6S1a32j8) - This video introduced me to Frontend Mentor and inspired me to do a project and to sharpen my skills. 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Website - [muggleboii](https://github.com/muggleboii)
+- Frontend Mentor - [@muggleboii](https://www.frontendmentor.io/profile/muggleboii)
 
 ## Acknowledgments
 

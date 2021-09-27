@@ -1,56 +1,100 @@
-
-
 .app {
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 1rem;
+    margin: auto;
+    font-size: $fontSmall;
 
-    display: grid;
-    grid-template-columns: 557px 557px;
-    grid-template-rows: 550px 550px;
-    grid-column-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
 
-    width: 1228px;
-    height: 644px;
+    justify-content: space-between;
+
+    width: 76.75rem;
+    height: 41.5rem;
     background-color: $white;
-    padding: 44px;
-    border-radius: 37px;
+    padding: 2.75rem;
+    border-radius: 2.3125rem;
     color: $veryDarkCyan;
 
-    .input{
-        @include input($text-align: right);
-        width: 505px;
-        height: 65px;
+    &-item {
+        width: 34.5rem;
+        height: 34.75rem;
+    }
 
+}
 
-        background-color: $lightGrayishCyan2;
-        text-align: right;
+$breakpoints: (
+    xs: 375px, // 375px
+    sm:48.0em, // 768px
+    m: 73.375rem, // 1174px
+    norm: 76.75rem
+);
 
-        padding: 20px;
-
-        
-
+@media only screen and (max-width: map-get($breakpoints, norm))  {
+    .app {
+        width: 100%;
+        height: 100%;
     }
 }
 
-@mixin icon($imgLink) {
-    position: relative;
+@media only screen and (max-width: map-get($breakpoints, m))  {
+    .app {
 
-    &::before {
-        content: "";
-        position: absolute;
-        left: 10px;
-        top: 0;
-        bottom: 0;
-        width: 24px;
-        background: $imgLink center / contain no-repeat;
-}
+        width: auto;
+        height: auto;
+
+        &-item {
+            justify-content: center;
+            align-items: stretch;
+
+            width: 100%;
+            height: 100%;
+            margin: auto;
+
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+        }
+
+        .calculator {
+            &-item {
+                .button-container {
+                    width: 100%;
+
+                    .button-item {
+                        width: 47%;
+                    }
+
+                    .button-input {
+                        width: 47%;
+                    }
+                }
+            }
+
+            .input {
+                width: 100%;
+            }
+        }
+    }
 }
 
-#dollar-sign {
-    @include icon($imgLink: url(/images/icon-dollar.svg));
+@media only screen and (max-width: map-get($breakpoints, xs))  {
+    html {
+        font-size: 80%;
+    }
+
+
+    .app {
+        width: 100%;
+        height: 100%;
+    }
+
+    .tip-and-total{
+        padding: 1.5rem;
+
+        button {
+            margin-top: unset;
+        }
+    }
+
 }
 
-#people-icon {
-    @include icon($imgLink: url(/images/icon-person.svg));
-}
+// 354px lowest width

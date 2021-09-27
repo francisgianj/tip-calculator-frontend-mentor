@@ -2,31 +2,37 @@
     background-color: $veryDarkCyan;
     color: $white;
 
-    border-radius: 20px;
-    padding: 56px;
+    border-radius: 1.25rem;
+    padding: 3.5rem; //56px
 
     display: block;
 
-    &-grid {
-        display: grid;
-        grid-template-columns: 443px;
-        grid-template-rows: 53px 53px;
-        row-gap: 75px;
-    }
-
     .header {
-        font-size: 1rem;
+        font-size: $fontSmall;
         font-weight: bold;
+        margin-top: 1.875rem;
+        margin-block-end: 0.75rem;
     }
+    
     .person {
         color: $darkGrayishCyan1;
-        font-size: 1rem;
+        font-size: $fontSmall;
         font-weight: bold;
+        margin-block: unset;
+        margin-bottom: 5.0rem;
+    }
+    
+    .amount {
+        font-size: $fontExLarge;
+        color: $strongCyan;
+        font-weight: bold;
+        margin-block: unset;
+        float: right;
     }
 
     button {
         @include fontSettings();
-        font-size: 1.25rem;
+        font-size: $fontMedium;
         background-color: hsl(172, 67%, 45%);
         color: hsl(184, 92%, 20%);
 
@@ -35,32 +41,13 @@
         border: none;
         border-radius: 5px;
 
-        width: 445px;
-        height: 65px;
-        margin-top: 190px;
+        width: 100%;
+        height: 4.0625rem;
+        margin-top: 80px;
 
         &:disabled {
             cursor: default;
             background-color: hsl(183, 79%, 24%);
         }
-
     }
 }
-
-
-.gr {
-    display: grid;
-    grid-template-columns: 130px 180px;
-    grid-template-rows: 50px;
-    column-gap: 130px;
-
-    .amount {
-        font-size: 3.125rem;
-        color: $strongCyan;
-        font-weight: bold;
-        text-align: right;
-        margin-top: 5px;
-    }
-}
-
-
