@@ -85,8 +85,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 - [CS50's Web Programming with Python and JavaScript 2020](https://www.youtube.com/playlist?list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu) - This lecture helped me understand web programming better.
   - [HTML and CSS - Lecture 0 - CS50's Web Programming with Python and JavaScript 2020](https://youtu.be/zFZrkCIc2Oc?list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu) - This specific lecture from the playlist above helped me understand HTML and CSS, responsive design, and how flex and grid works.
-  - [The coder coder's How to Make a Landing Page](https://youtu.be/aoQ6S1a32j8) - This video introduced me to Frontend Mentor and inspired me to do a project and to sharpen my skills.
-  - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - This guide to Flexbox (who also serves as your cheatsheet to flexbox) helped me to understand how flexbox's works
+- [The coder coder's How to Make a Landing Page](https://youtu.be/aoQ6S1a32j8) - This video introduced me to Frontend Mentor and inspired me to do a project and to sharpen my skills.
+- [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - This guide to Flexbox (who also serves as your cheatsheet to flexbox) helped me to understand how flexbox's works
 
 ## Author
 
