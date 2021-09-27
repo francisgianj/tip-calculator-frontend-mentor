@@ -21,7 +21,7 @@ document.addEventListener("keyup", (event)=> {
     let billInput = parseFloat(document.querySelector("#bill").value);
     let numOfPeople = parseFloat(document.querySelector("#num-of-people")
     .value);
-    // when hover hsl(173, 61%, 77%)
+
     if (billInput || customTipInput || numOfPeople) {
         document.querySelector("#reset-button").disabled = false;
     } else {

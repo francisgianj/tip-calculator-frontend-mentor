@@ -1,12 +1,70 @@
-.input-div-grid {
-    display: grid;
-    grid-template-columns: 505px;
-    grid-template-rows: 95px 195px 95px;
-    row-gap: 65px;
+.calculator {
+
+    &-item {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 31.5625rem;
+        
+            %item {
+                width: 9.8125rem;
+                height: 4.0625rem;
+                margin: 0.625rem 0;
+                text-align: center;
+            }
+        
+            .button-item {
+                @include fontSettings();
+                @extend %item;
+                font-size: $fontLarge;
+                color: $white;
+                cursor: pointer;
+                background-color: $veryDarkCyan;
+                border: none;
+
+                border-radius: 0.5rem;
+                padding: 1.0625rem;
+        
+        
+        
+                transition: color 400ms ease-in-out;
+        
+                &:hover {
+                    background-color: $lightGrayishCyan3;
+                    color: $veryDarkCyan;
+                }
+            }
+        
+            .button-input {
+                @extend %item;
+                padding: 1.125rem;
+        
+        
+                @include input($text-align: right);
+            }
+        }
+    }
+
+    .input{
+        @include input($text-align: right);
+        width: 31.5625rem;
+        height: 4.0625rem;
+
+        background-color: $lightGrayishCyan2;
+        text-align: right;
+
+        padding: 1.25rem;
+
+    }
 
     p {
         color: $darkGrayishCyan1;
-        font-size: 1rem;
+        font-size: $fontSmall;
         font-weight: bold;
 
         span {
@@ -19,4 +77,25 @@
     
 }
 
+@mixin icon($imgLink) {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        bottom: 0;
+        width: 24px;
+        background: $imgLink center / contain no-repeat;
+    }
+}
+
+#dollar-sign {
+    @include icon($imgLink: url(/images/icon-dollar.svg));
+}
+
+#people-icon {
+    @include icon($imgLink: url(/images/icon-person.svg));
+}
 

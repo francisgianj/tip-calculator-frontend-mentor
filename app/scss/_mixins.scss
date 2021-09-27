@@ -5,13 +5,6 @@
     width: 50%;
 }
 
-@mixin dollarsign {
-    background-image: url("C:/Users/Francis/OneDrive/Desktop/frontend-practice/tip-calculator-app-main/images/icon-dollar.svg");
-    background-repeat: no-repeat;
-    background-size: 15px;
-    padding-left: 0.5625rem;
-}
-
 @mixin button-size {
     width: 3.75rem;
     height: 1.5625rem;
@@ -23,13 +16,13 @@
 }
 
 @mixin input($text-align) {
-    border: none;
-    border-radius: 8px;
+    border: solid transparent 2px;
+    border-radius: 0.5rem;
     color: $veryDarkCyan;
     caret-color: $caretColor;
     font-family: inherit;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: $fontLarge;
     cursor: pointer;
 
     transition: color 400ms ease-in-out;

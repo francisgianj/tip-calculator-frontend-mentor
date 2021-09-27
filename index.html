@@ -23,9 +23,9 @@
 
   <div class="app">
     <!-- div 1 of 2 inside the outerbox -->
-    <div class="input-div-grid">
+    <div class="calculator app-item">
       <!--"outerbox-item"-->
-      <div>
+      <div class="calculator-item">
         <!-- div 1 -->
         <p>Bill</p>
         <label id="dollar-sign">
@@ -34,22 +34,22 @@
       </div>
 
 
-      <div>
+      <div class="calculator-item">
         <!-- div 2 -->
         <!-- TODO margin bottom maybe -->
         <p>Select Tip %</p>
-        <div class="grid" name="tip-buttons">
-          <button value="0.05" onclick="getPercent(this)" class="grid-item">5%</button>
-          <button value="0.10" onclick="getPercent(this)" class="grid-item">10%</button>
-          <button value="0.15" onclick="getPercent(this)" class="grid-item">15%</button>
-          <button value="0.25" onclick="getPercent(this)" class="grid-item">25%</button>
-          <button value="0.50" onclick="getPercent(this)" class="grid-item">50%</button>
-          <input type="text" id="custom-tip-input" placeholder="Custom" class="grid-item-input">
+        <div class="button-container" name="tip-buttons">
+          <button value="0.05" onclick="getPercent(this)" class="button-item">5%</button>
+          <button value="0.10" onclick="getPercent(this)" class="button-item">10%</button>
+          <button value="0.15" onclick="getPercent(this)" class="button-item">15%</button>
+          <button value="0.25" onclick="getPercent(this)" class="button-item">25%</button>
+          <button value="0.50" onclick="getPercent(this)" class="button-item">50%</button>
+          <input type="text" id="custom-tip-input" placeholder="Custom" class="button-input">
         </div>
       </div>
 
 
-      <div>
+      <div class="calculator-item">
         <!-- div 3 -->
         <p>Number of People<span id="not-zero">Can't be zero</span></p>
         <label id="people-icon">
@@ -57,35 +57,16 @@
         </label>
       </div>
 
-
-      <p style="display: none;" id="tip-value-container">0</p>
     </div>
+    <p style="display: none;" id="tip-value-container">0</p>
     <!-- div 2 of 2 inside the outerbox -->
-    <div class="tip-and-total">
+    <div class="tip-and-total app-item">
 
-      <div class="tip-and-total-grid">
-        <div class="gr">
-          <!-- div 1 -->
-          <div>
-            <p class="header">Tip Amount</p>
-            <p class="person">/ person</p>
-          </div>
-          <div>
-            <p id="tip-amount" class="amount">$0.00</p>
-          </div>
-        </div>
+      <p class="header">Tip Amount<span id="tip-amount" class="amount">$0.00</span></p>
+      <p class="person">/ person</p>
 
-
-        <div class="gr">
-          <div>
-            <p class="header">Total</p>
-            <p class="person">/ person</p>
-          </div>
-          <div>
-            <p id="total-amount" class="amount">$0.00</p>
-          </div>
-        </div>
-      </div>
+      <p class="header">Total<span id="total-amount" class="amount">$0.00</span></p>
+      <p class="person">/ person</p>
 
 
       <button onclick="reset()" id="reset-button" disabled="disabled">RESET</button>
