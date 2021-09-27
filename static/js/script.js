@@ -13,10 +13,12 @@ document.addEventListener("keyup", (event)=> {
         });
     
         tipValueContainer.innerHTML = customTipInput / 100;
-    } else {
-        document.querySelector("#custom-tip-input").style.textAlign = "";
-        tipValueContainer.innerHTML = 0;
-    }
+    } 
+
+    // else {
+        // document.querySelector("#custom-tip-input").style.textAlign = "";
+        // tipValueContainer.innerHTML = 0;
+    // }
 
     let billInput = parseFloat(document.querySelector("#bill").value);
     let numOfPeople = parseFloat(document.querySelector("#num-of-people")
