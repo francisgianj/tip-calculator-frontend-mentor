@@ -6,7 +6,7 @@ document.addEventListener("keyup", (event)=> {
 
     if (customTipInput) {
         document.querySelector("#custom-tip-input").style.textAlign = "right";
-        const items = document.querySelectorAll(".grid-item");
+        const items = document.querySelectorAll(".button-item");
         
         items.forEach((value) => {
             value.style.backgroundColor = "";
@@ -67,7 +67,7 @@ const getPercent = (element) => {
     let buttonValue = parseFloat(element.value);
     document.querySelector("#tip-value-container").innerHTML = buttonValue;
 
-    const items = document.querySelectorAll(".grid-item");
+    const items = document.querySelectorAll(".button-item");
     
     items.forEach((value) => {
         if (buttonValue == value.value) {
@@ -110,7 +110,7 @@ const reset = () => {
     document.querySelector("#not-zero").style.visibility = "hidden";
     document.querySelector("#num-of-people").style.border = "none";
 
-    const items = document.querySelectorAll(".grid-item");
+    const items = document.querySelectorAll(".button-item");
     
     items.forEach((value) => {
         value.style.backgroundColor = "";

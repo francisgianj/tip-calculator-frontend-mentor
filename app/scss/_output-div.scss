@@ -48,6 +48,14 @@
         &:disabled {
             cursor: default;
             background-color: hsl(183, 79%, 24%);
+            // To keep it's background color when it's disabled
+            &:hover {
+                background-color: hsl(183, 79%, 24%);
+            }
+        }
+
+        &:hover {
+            background-color: $lightGrayishCyan3;
         }
     }
 }

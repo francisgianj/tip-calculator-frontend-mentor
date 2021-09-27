@@ -72,6 +72,12 @@ body {
   cursor: default;
   background-color: #0d696e;
 }
+.tip-and-total button:disabled:hover {
+  background-color: #0d696e;
+}
+.tip-and-total button:hover {
+  background-color: #a1e8e0;
+}
 
 .calculator-item:not(:last-child) {
   margin-bottom: 50px;
@@ -237,14 +243,14 @@ body {
     width: 100%;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 48em) {
+  html {
+    font-size: 90%;
+  }
+}
+@media only screen and (max-width: 37.5em) {
   html {
     font-size: 80%;
-  }
-
-  .app {
-    width: 100%;
-    height: 100%;
   }
 
   .tip-and-total {
