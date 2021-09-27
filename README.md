@@ -1,93 +1,101 @@
-# Frontend Mentor - Tip calculator app
+# Frontend Mentor - Tip calculator app solution
 
-![Design preview for the Tip calculator app coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Tip calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this tip calculator app and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the app depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+![](./screenshot.png)
+![](./screenshot-mobile.png)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+### Links
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+- Solution URL: [Solution URL](https://github.com/muggleboii/tip-calculator-frontend-mentor)
+- Live Site URL: [Live Site URL](https://muggleboii.github.io/tip-calculator-frontend-mentor/)
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+## My process
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+### Built with
 
-## Building your project
+- HTML 5
+- CSS Grid
+- JavaScript
+- [SCSS](https://sass-lang.com/) - Superset of CSS
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+### What I learned
+ 
+When I started to create this project, there weren't a lot of expectations that I had for myself. I'm not a visual person, I think logic is best suited for me. That's why I think front-end development is not my thing. While creating this project, I was studying and watching lectures about HTML and CSS. These resources gave me the knowledge to pursue finishing this project within two weeks. And within that two weeks, there's a lot of frustration and procrastination because of a certain problem, Most specifically with overflowing of elements. Besides all of that, I learn how to use some of the complex CSS properties like flex and grid, and it's my first time using media queries too for responsive design. I also learned how to use the rem length unit and how rem differs from px. This is just two weeks of coding with HTML, SCSS, and JavaScript. I have so much to learn in the future and I'm looking forward to it.
 
-## Deploying your project
+I took a lot of time trying to write these statements inside the event listener method (keyup) because at first, when I'm deleting numbers inside the input, the tip value container won't clear. The last deleted number stays in the container because, I don't know why I'm having trouble writing the logic when the customTipInput is empty, clear the container. But anyways, I've done it.
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+```js
+    const tipValueContainer = document.querySelector("#tip-value-container");
+    const customTipInput = parseFloat(document.querySelector("#custom-tip-input")
+    .value);
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+    if (customTipInput) {
+        document.querySelector("#custom-tip-input").style.textAlign = "right";
+        const items = document.querySelectorAll(".grid-item");
+        
+        items.forEach((value) => {
+            value.style.backgroundColor = "";
+        });
+    
+        tipValueContainer.innerHTML = customTipInput / 100;
+    } else {
+        document.querySelector("#custom-tip-input").style.textAlign = "";
+        tipValueContainer.innerHTML = 0;
+    }
+```
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+Also, I jumped out learning SCSS because it saves me time from writing repetitive codes. And it's more organized that's why I got less confuse with my codes.
 
-## Create a custom `README.md`
+### Continued development
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+### Useful resources
 
-## Submitting your solution
+- [CS50's Web Programming with Python and JavaScript 2020](https://www.youtube.com/playlist?list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu) - This lecture helped me understand web programming better.
+  - [HTML and CSS - Lecture 0 - CS50's Web Programming with Python and JavaScript 2020](https://youtu.be/zFZrkCIc2Oc?list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu) - This specific lecture from the playlist above helped me understand HTML and CSS, responsive design, and how flex and grid works.
+  - [The coder coder's How to Make a Landing Page](https://youtu.be/aoQ6S1a32j8) - This video introduced me to Frontend Mentor and inspired me to do a project and to sharpen my skills. 
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+## Author
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+- Website - [muggleboii](https://github.com/muggleboii)
+- Frontend Mentor - [@muggleboii](https://www.frontendmentor.io/profile/muggleboii)
 
-## Sharing your solution
+## Acknowledgments
 
-There are multiple places you can share your solution:
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
-
-## Got feedback for us?
-
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
-
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
-
-**Have fun building!** 🚀
+**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
